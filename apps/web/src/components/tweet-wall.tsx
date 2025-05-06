@@ -67,7 +67,7 @@ const VerifiedBadge: FC = () => (
 VerifiedBadge.displayName = 'VerifiedBadge';
 
 const TweetItem: FC<TweetItemProps> = memo(({ tweet }: TweetItemProps) => (
-  <li className="bg-card p-4 rounded-lg shadow-sm">
+  <li className="bg-card p-4 rounded-lg shadow-sm border">
     <div className="grid grid-cols-[2.5rem_1fr] gap-2">
       <Avatar className="size-10">
         <AvatarImage src={tweet.avatar} alt={tweet.name} />
@@ -182,10 +182,10 @@ const TweetWall: FC<TweetWallProps> = ({ tweets, videos }) => {
   });
 
   return (
-    <section className="mx-auto bg-muted/70 py-16">
+    <section className="mx-auto py-16">
       <div className="container mx-auto relative">
         <div className="flex items-start justify-between w-full">
-          <h2 className="text-left text-balance text-foreground mb-4 text-4xl font-normal">
+          <h2 className="text-left text-balance mb-4 text-4xl font-normal text-foreground">
             Approved by over 10,000 users
             <br />
             on social media
@@ -195,8 +195,11 @@ const TweetWall: FC<TweetWallProps> = ({ tweets, videos }) => {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              buttonVariants({ variant: 'default', size: 'xl' }),
-              'items-center',
+              buttonVariants({
+                variant: 'default',
+                size: 'xl',
+              }),
+              'text-white items-center',
             )}
           >
             See more reviews on X

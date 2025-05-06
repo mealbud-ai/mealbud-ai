@@ -4,9 +4,8 @@ import TweetWall from '@/components/tweet-wall';
 export default function Home() {
   return (
     <main className="relative">
-      <div className="absolute top-0 bg-gradient-to-b from-background to-primary/40  min-h-screen -z-10 w-screen"></div>
-      <section className="pt-1 container mx-auto">
-        <div className="space-y-4 w-full py-20 mt-16">
+      <section className="pt-1 mx-auto relative z-10 bg-gradient-to-b from-background via-background to-primary">
+        <div className="space-y-4 w-full py-20 mt-16 container mx-auto">
           <p className="text-lg md:text-xl font-normal text-center">
             <strong className="font-normal text-primary">
               AI Daily Nutrition Assistant
@@ -25,7 +24,7 @@ export default function Home() {
             health.
           </h2>
         </div>
-        <div className="mt-16 relative">
+        <div className="mt-16 relative container mx-auto">
           <div className="absolute inset-0 z-10 pointer-events-none h-1/5 top-auto"></div>
           <div className="bg-card backdrop-blur-sm rounded-t-lg border shadow-sm overflow-hidden border-b-0">
             <div className="p-4 border-b flex items-center gap-2">

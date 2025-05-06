@@ -30,7 +30,7 @@ interface ResultsCardProps {
 const MealDescriptionCard: FC<MealDescriptionCardProps> = memo(
   ({ step, onContinue }: MealDescriptionCardProps) => (
     <Card
-      className={`p-4 border ${step >= 0 ? 'border-primary bg-card' : 'bg-muted'} transition-all duration-300`}
+      className={`p-4 border ${step >= 0 ? 'border bg-card' : 'bg-muted'} transition-all duration-300`}
     >
       <h3 className="font-medium mb-2 flex items-center">
         <span className="rounded-full w-5 h-5 inline-flex items-center justify-center text-xs mr-2">
@@ -95,7 +95,7 @@ AnalysisContent.displayName = 'AnalysisContent';
 const AnalysisCard: FC<AnalysisCardProps> = memo(
   ({ step, isAnalyzing, progress, onAnalyze }: AnalysisCardProps) => (
     <Card
-      className={`p-4 border ${step >= 1 ? 'border-primary bg-card' : 'bg-muted opacity-50'} transition-all duration-300`}
+      className={`p-4 border ${step >= 1 ? 'border bg-card' : 'bg-muted opacity-50'} transition-all duration-300`}
     >
       <h3 className="font-medium mb-2 flex items-center">
         <span className="rounded-full w-5 h-5 inline-flex items-center justify-center text-xs mr-2">
@@ -127,7 +127,7 @@ AnalysisCard.displayName = 'AnalysisCard';
 const ResultsCard: FC<ResultsCardProps> = memo(
   ({ step, onReset }: ResultsCardProps) => (
     <Card
-      className={`p-4 border ${step >= 2 ? 'border-primary bg-card' : 'bg-muted opacity-50'} transition-all duration-300`}
+      className={`p-4 border ${step >= 2 ? 'border bg-card' : 'bg-muted opacity-50'} transition-all duration-300`}
     >
       <h3 className="font-medium mb-2 flex items-center">
         <span className="rounded-full w-5 h-5 inline-flex items-center justify-center text-xs mr-2">
