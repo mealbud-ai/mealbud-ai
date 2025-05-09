@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useMemo } from 'react';
 
 interface CookieConsentContextType {
   hasCookieConsent: boolean;
@@ -11,13 +11,15 @@ const CookieConsentContext = createContext<
   CookieConsentContextType | undefined
 >(undefined);
 
+type CookieConsentProviderProps = Readonly<{
+  children: React.ReactNode;
+  initialConsent?: boolean;
+}>;
+
 export function CookieConsentProvider({
   children,
   initialConsent = false,
-}: {
-  children: React.ReactNode;
-  initialConsent?: boolean;
-}) {
+}: CookieConsentProviderProps) {
   const [hasCookieConsent, setHasCookieConsent] = useState(initialConsent);
 
   useEffect(() => {
@@ -31,10 +33,13 @@ export function CookieConsentProvider({
     }
   }, []);
 
+  const contextValue = useMemo(
+    () => ({ hasCookieConsent, setHasCookieConsent }),
+    [hasCookieConsent],
+  );
+
   return (
-    <CookieConsentContext.Provider
-      value={{ hasCookieConsent, setHasCookieConsent }}
-    >
+    <CookieConsentContext.Provider value={contextValue}>
       {children}
     </CookieConsentContext.Provider>
   );

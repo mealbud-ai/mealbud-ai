@@ -2,11 +2,15 @@
 
 import posthog from 'posthog-js';
 import { PostHogProvider as PHProvider, usePostHog } from 'posthog-js/react';
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, type ReactNode } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useCookieConsent } from './cookie-consent-provider';
 
-export function PostHogProvider({ children }: { children: React.ReactNode }) {
+type PostHogProviderProps = Readonly<{
+  children: ReactNode;
+}>;
+
+export function PostHogProvider({ children }: PostHogProviderProps) {
   const { hasCookieConsent } = useCookieConsent();
 
   useEffect(() => {
