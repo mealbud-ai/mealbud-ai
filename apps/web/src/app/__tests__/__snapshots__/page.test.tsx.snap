@@ -2,15 +2,545 @@
 
 exports[`Page renders homepage unchanged 1`] = `
 <div>
-  <div
-    class="flex h-screen w-screen items-center justify-center bg-background text-primary-foreground"
+  <main
+    class="relative"
   >
-    <button
-      class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3"
-      data-slot="button"
+    <section
+      class="pt-1 mx-auto relative z-10 bg-gradient-to-b from-background via-background to-primary"
     >
-      Start Building Now
-    </button>
-  </div>
+      <div
+        class="space-y-4 w-full py-20 mt-16 container mx-auto"
+      >
+        <p
+          class="text-lg md:text-xl font-normal text-center"
+        >
+          <strong
+            class="font-normal text-primary"
+          >
+            AI Daily Nutrition Assistant
+          </strong>
+        </p>
+        <h1
+          class="text-5xl lg:text-8xl text-center font-semibold"
+        >
+          Be aware of what you eat
+          <br />
+          every day with Mealbud
+        </h1>
+        <h2
+          class="text-lg md:text-2xl text-center"
+        >
+          Just describe your meal. Mealbud gives you instant insights into calories, nutrients and habits.
+          <br />
+          Stay mindful of what you eat every day and take control of your health.
+        </h2>
+      </div>
+      <div
+        class="mt-16 relative container mx-auto"
+      >
+        <div
+          class="absolute inset-0 z-10 pointer-events-none h-1/5 top-auto"
+        />
+        <div
+          class="bg-card backdrop-blur-sm rounded-t-lg border shadow-sm overflow-hidden border-b-0"
+        >
+          <div
+            class="p-4 border-b flex items-center gap-2"
+          >
+            <div
+              class="h-3 w-3 rounded-full bg-red-500"
+            />
+            <div
+              class="h-3 w-3 rounded-full bg-yellow-500"
+            />
+            <div
+              class="h-3 w-3 rounded-full bg-green-500"
+            />
+            <div
+              class="ml-4 text-sm text-slate-400"
+            >
+              mealbud.ai
+            </div>
+          </div>
+          <div
+            class="p-6 min-h-[300px] h-auto"
+          >
+            <div
+              class="max-w-4xl mx-auto"
+            >
+              <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8"
+              >
+                <div
+                  class="text-card-foreground flex flex-col gap-6 rounded-xl shadow-sm p-4 border bg-card transition-all duration-300"
+                  data-slot="card"
+                >
+                  <h3
+                    class="font-medium mb-2 flex items-center"
+                  >
+                    <span
+                      class="rounded-full w-5 h-5 inline-flex items-center justify-center text-xs mr-2"
+                    >
+                      1
+                    </span>
+                     
+                    Describe Your Meal
+                  </h3>
+                  <textarea
+                    class="border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed md:text-sm min-h-[100px] mb-3 disabled:opacity-100"
+                    data-slot="textarea"
+                    disabled=""
+                  >
+                    Grilled chicken sandwich with avocado, lettuce, tomato and a side of sweet potato fries
+                  </textarea>
+                  <button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3"
+                    data-slot="button"
+                  >
+                    Continue
+                  </button>
+                </div>
+                <div
+                  class="text-card-foreground flex flex-col gap-6 rounded-xl shadow-sm p-4 border bg-muted opacity-50 transition-all duration-300"
+                  data-slot="card"
+                >
+                  <h3
+                    class="font-medium mb-2 flex items-center"
+                  >
+                    <span
+                      class="rounded-full w-5 h-5 inline-flex items-center justify-center text-xs mr-2"
+                    >
+                      2
+                    </span>
+                     
+                    AI Analysis
+                  </h3>
+                  <div
+                    class="flex flex-col items-center justify-center min-h-[100px] mb-3"
+                  >
+                    <div
+                      class="text-center"
+                    >
+                      <p>
+                        Waiting for meal description...
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    aria-busy="false"
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 w-full"
+                    data-slot="button"
+                    disabled=""
+                  >
+                    Analyze
+                  </button>
+                </div>
+                <div
+                  class="text-card-foreground flex flex-col gap-6 rounded-xl shadow-sm p-4 border bg-muted opacity-50 transition-all duration-300"
+                  data-slot="card"
+                >
+                  <h3
+                    class="font-medium mb-2 flex items-center"
+                  >
+                    <span
+                      class="rounded-full w-5 h-5 inline-flex items-center justify-center text-xs mr-2"
+                    >
+                      3
+                    </span>
+                     
+                    Nutrition Results
+                  </h3>
+                  <div
+                    class="min-h-[100px] mb-3"
+                  >
+                    <div
+                      class="text-center h-full flex items-center justify-center"
+                    >
+                      <p>
+                        Waiting for analysis...
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 w-full"
+                    data-slot="button"
+                    disabled=""
+                  >
+                    Try Again
+                  </button>
+                </div>
+              </div>
+              <div
+                class="mt-8 text-center"
+              >
+                <p
+                  class="text-sm"
+                >
+                  Experience the power of AI-driven nutrition analysis.
+                   
+                  <br
+                    class="hidden md:inline"
+                  />
+                  This is a demo of Mealbud's capabilities, and we are excited to help you achieve your nutrition goals! (Mock data)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="mx-auto py-16"
+    >
+      <div
+        class="container mx-auto relative"
+      >
+        <div
+          class="flex items-start justify-between w-full"
+        >
+          <h2
+            class="text-left text-balance mb-4 text-4xl font-normal text-foreground"
+          >
+            Approved by over 10,000 users
+            <br />
+            on social media
+          </h2>
+          <a
+            class="inline-flex justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary shadow-xs hover:bg-primary/90 h-12 rounded-md px-8 has-[>svg]:px-6 text-white items-center"
+            href="https://x.com/search?q=%23mealbud.ai"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            See more reviews on X
+            <svg
+              data-testid="arrow-up-right-icon"
+            />
+          </a>
+        </div>
+        <div
+          class="relative flex gap-4"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-8"
+          >
+            <ul
+              class="flex flex-col gap-4"
+            >
+              <li
+                class="bg-card p-4 rounded-lg shadow-sm border"
+              >
+                <div
+                  class="grid grid-cols-[2.5rem_1fr] gap-2"
+                >
+                  <span
+                    class="relative flex shrink-0 overflow-hidden rounded-full size-10"
+                    data-slot="avatar"
+                  >
+                    <span
+                      class="bg-muted flex size-full items-center justify-center rounded-full"
+                      data-slot="avatar-fallback"
+                    >
+                      C
+                    </span>
+                  </span>
+                  <div
+                    class="text-xs"
+                  >
+                    <p
+                      class="flex items-center gap-1 text-base"
+                    >
+                      Clara D.
+                      <svg
+                        class="size-4"
+                        fill="none"
+                        height="13"
+                        viewBox="0 0 12 13"
+                        width="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.8328 6.78451C11.8328 7.17703 11.7387 7.54104 11.5506 7.87435C11.3625 8.20766 11.1109 8.46861 10.7937 8.65062C10.8025 8.70982 10.8069 8.80192 10.8069 8.92691C10.8069 9.52117 10.6078 10.0255 10.2141 10.4422C9.81812 10.861 9.34125 11.0693 8.78344 11.0693C8.53406 11.0693 8.29562 11.0233 8.07031 10.9312C7.89531 11.2908 7.64375 11.5802 7.31344 11.8017C6.98531 12.0254 6.62437 12.135 6.23281 12.135C5.8325 12.135 5.46937 12.0276 5.14562 11.8083C4.81969 11.5912 4.57031 11.2996 4.39531 10.9312C4.17 11.0233 3.93375 11.0693 3.68219 11.0693C3.12437 11.0693 2.64531 10.861 2.245 10.4422C1.84469 10.0255 1.64562 9.51898 1.64562 8.92691C1.64562 8.86113 1.65437 8.76903 1.66969 8.65062C1.3525 8.46642 1.10094 8.20766 0.912812 7.87435C0.726875 7.54104 0.632812 7.17703 0.632812 6.78451C0.632812 6.36787 0.737812 5.98413 0.945625 5.63766C1.15344 5.29119 1.43344 5.03463 1.78344 4.86798C1.69156 4.61799 1.64562 4.36582 1.64562 4.11583C1.64562 3.52377 1.84469 3.01722 2.245 2.60058C2.64531 2.18394 3.12437 1.97343 3.68219 1.97343C3.93156 1.97343 4.17 2.01948 4.39531 2.11158C4.57031 1.75196 4.82187 1.4625 5.15219 1.24103C5.48031 1.01955 5.84125 0.907715 6.23281 0.907715C6.62437 0.907715 6.98531 1.01955 7.31344 1.23883C7.64156 1.46031 7.89531 1.74976 8.07031 2.10939C8.29562 2.01729 8.53187 1.97124 8.78344 1.97124C9.34125 1.97124 9.81812 2.17956 10.2141 2.59839C10.61 3.01722 10.8069 3.52157 10.8069 4.11364C10.8069 4.38994 10.7653 4.63992 10.6822 4.86578C11.0322 5.03244 11.3122 5.289 11.52 5.63547C11.7278 5.98413 11.8328 6.36787 11.8328 6.78451ZM5.99437 8.47519L8.30656 5.00393C8.36562 4.91183 8.38312 4.81096 8.36344 4.70351C8.34156 4.59606 8.28687 4.51054 8.195 4.45353C8.10312 4.39432 8.0025 4.37459 7.89531 4.38994C7.78594 4.40748 7.69844 4.46011 7.63281 4.55221L5.59625 7.62218L4.65781 6.68364C4.57469 6.60032 4.47844 6.56084 4.37125 6.56523C4.26187 6.56962 4.16781 6.60909 4.08469 6.68364C4.01031 6.7582 3.97312 6.85249 3.97312 6.96652C3.97312 7.07835 4.01031 7.17265 4.08469 7.24939L5.37312 8.54097L5.43656 8.59141C5.51094 8.64184 5.5875 8.66597 5.66187 8.66597C5.80844 8.66377 5.92 8.60237 5.99437 8.47519Z"
+                          fill="#5289FE"
+                        />
+                      </svg>
+                    </p>
+                    <p>
+                      <span
+                        class="text-muted-foreground"
+                      >
+                        @clara_eats
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-base text-card-foreground mt-2"
+                >
+                  I've been testing Mealbud for a few days — it's wild how accurate the calorie estimates are 👀🍽️ Definitely my new go-to before logging anything manually.
+                </p>
+                <time
+                  class="text-xs text-muted-foreground mt-2"
+                >
+                  December 21, 2024 at 03:23 PM
+                </time>
+              </li>
+              <li
+                class="aspect-[9/16] relative overflow-hidden rounded-lg shadow-sm"
+              >
+                <a
+                  class="absolute inset-0 flex items-center justify-center bg-card text-card-foreground hover:bg-card/80 transition-colors duration-200"
+                  href="https://x.com/mealbud.ai"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    data-testid="play-icon"
+                  />
+                </a>
+                <img
+                  alt="Mealbud AI's video"
+                  class="object-cover w-full h-full"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="/images/placeholder.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                />
+              </li>
+            </ul>
+            <ul
+              class="flex flex-col gap-4"
+            >
+              <li
+                class="aspect-[9/16] relative overflow-hidden rounded-lg shadow-sm"
+              >
+                <a
+                  class="absolute inset-0 flex items-center justify-center bg-card text-card-foreground hover:bg-card/80 transition-colors duration-200"
+                  href="https://x.com/mealbud.ai"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    data-testid="play-icon"
+                  />
+                </a>
+                <img
+                  alt="Mealbud AI's video"
+                  class="object-cover w-full h-full"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="/images/placeholder.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                />
+              </li>
+              <li
+                class="bg-card p-4 rounded-lg shadow-sm border"
+              >
+                <div
+                  class="grid grid-cols-[2.5rem_1fr] gap-2"
+                >
+                  <span
+                    class="relative flex shrink-0 overflow-hidden rounded-full size-10"
+                    data-slot="avatar"
+                  >
+                    <span
+                      class="bg-muted flex size-full items-center justify-center rounded-full"
+                      data-slot="avatar-fallback"
+                    >
+                      L
+                    </span>
+                  </span>
+                  <div
+                    class="text-xs"
+                  >
+                    <p
+                      class="flex items-center gap-1 text-base"
+                    >
+                      Lucas R.
+                    </p>
+                    <p>
+                      <span
+                        class="text-muted-foreground"
+                      >
+                        @lucas_dev
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-base text-card-foreground mt-2"
+                >
+                  Finally found an app that lets me track my food without the boring manual input. Shoutout to Mealbud 🙌
+                </p>
+                <time
+                  class="text-xs text-muted-foreground mt-2"
+                >
+                  January 2, 2025 at 10:45 AM
+                </time>
+              </li>
+            </ul>
+            <ul
+              class="flex flex-col gap-4"
+            >
+              <li
+                class="bg-card p-4 rounded-lg shadow-sm border"
+              >
+                <div
+                  class="grid grid-cols-[2.5rem_1fr] gap-2"
+                >
+                  <span
+                    class="relative flex shrink-0 overflow-hidden rounded-full size-10"
+                    data-slot="avatar"
+                  >
+                    <span
+                      class="bg-muted flex size-full items-center justify-center rounded-full"
+                      data-slot="avatar-fallback"
+                    >
+                      S
+                    </span>
+                  </span>
+                  <div
+                    class="text-xs"
+                  >
+                    <p
+                      class="flex items-center gap-1 text-base"
+                    >
+                      Sophie A.
+                      <svg
+                        class="size-4"
+                        fill="none"
+                        height="13"
+                        viewBox="0 0 12 13"
+                        width="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.8328 6.78451C11.8328 7.17703 11.7387 7.54104 11.5506 7.87435C11.3625 8.20766 11.1109 8.46861 10.7937 8.65062C10.8025 8.70982 10.8069 8.80192 10.8069 8.92691C10.8069 9.52117 10.6078 10.0255 10.2141 10.4422C9.81812 10.861 9.34125 11.0693 8.78344 11.0693C8.53406 11.0693 8.29562 11.0233 8.07031 10.9312C7.89531 11.2908 7.64375 11.5802 7.31344 11.8017C6.98531 12.0254 6.62437 12.135 6.23281 12.135C5.8325 12.135 5.46937 12.0276 5.14562 11.8083C4.81969 11.5912 4.57031 11.2996 4.39531 10.9312C4.17 11.0233 3.93375 11.0693 3.68219 11.0693C3.12437 11.0693 2.64531 10.861 2.245 10.4422C1.84469 10.0255 1.64562 9.51898 1.64562 8.92691C1.64562 8.86113 1.65437 8.76903 1.66969 8.65062C1.3525 8.46642 1.10094 8.20766 0.912812 7.87435C0.726875 7.54104 0.632812 7.17703 0.632812 6.78451C0.632812 6.36787 0.737812 5.98413 0.945625 5.63766C1.15344 5.29119 1.43344 5.03463 1.78344 4.86798C1.69156 4.61799 1.64562 4.36582 1.64562 4.11583C1.64562 3.52377 1.84469 3.01722 2.245 2.60058C2.64531 2.18394 3.12437 1.97343 3.68219 1.97343C3.93156 1.97343 4.17 2.01948 4.39531 2.11158C4.57031 1.75196 4.82187 1.4625 5.15219 1.24103C5.48031 1.01955 5.84125 0.907715 6.23281 0.907715C6.62437 0.907715 6.98531 1.01955 7.31344 1.23883C7.64156 1.46031 7.89531 1.74976 8.07031 2.10939C8.29562 2.01729 8.53187 1.97124 8.78344 1.97124C9.34125 1.97124 9.81812 2.17956 10.2141 2.59839C10.61 3.01722 10.8069 3.52157 10.8069 4.11364C10.8069 4.38994 10.7653 4.63992 10.6822 4.86578C11.0322 5.03244 11.3122 5.289 11.52 5.63547C11.7278 5.98413 11.8328 6.36787 11.8328 6.78451ZM5.99437 8.47519L8.30656 5.00393C8.36562 4.91183 8.38312 4.81096 8.36344 4.70351C8.34156 4.59606 8.28687 4.51054 8.195 4.45353C8.10312 4.39432 8.0025 4.37459 7.89531 4.38994C7.78594 4.40748 7.69844 4.46011 7.63281 4.55221L5.59625 7.62218L4.65781 6.68364C4.57469 6.60032 4.47844 6.56084 4.37125 6.56523C4.26187 6.56962 4.16781 6.60909 4.08469 6.68364C4.01031 6.7582 3.97312 6.85249 3.97312 6.96652C3.97312 7.07835 4.01031 7.17265 4.08469 7.24939L5.37312 8.54097L5.43656 8.59141C5.51094 8.64184 5.5875 8.66597 5.66187 8.66597C5.80844 8.66377 5.92 8.60237 5.99437 8.47519Z"
+                          fill="#5289FE"
+                        />
+                      </svg>
+                    </p>
+                    <p>
+                      <span
+                        class="text-muted-foreground"
+                      >
+                        @sophiefit
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-base text-card-foreground mt-2"
+                >
+                  Mealbud is like having a tiny dietitian in your pocket. Except it doesn't judge you when you eat pizza. 🍕💖 It even gave me a breakdown of the nutrients in a smoothie I made with 4 ingredients. Wild.
+                </p>
+                <time
+                  class="text-xs text-muted-foreground mt-2"
+                >
+                  February 10, 2025 at 08:08 PM
+                </time>
+              </li>
+              <li
+                class="aspect-[9/16] relative overflow-hidden rounded-lg shadow-sm"
+              >
+                <a
+                  class="absolute inset-0 flex items-center justify-center bg-card text-card-foreground hover:bg-card/80 transition-colors duration-200"
+                  href="https://x.com/mealbud.ai"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    data-testid="play-icon"
+                  />
+                </a>
+                <img
+                  alt="Mealbud AI's video"
+                  class="object-cover w-full h-full"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="/images/placeholder.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                />
+              </li>
+            </ul>
+            <ul
+              class="flex flex-col gap-4"
+            >
+              <li
+                class="aspect-[9/16] relative overflow-hidden rounded-lg shadow-sm"
+              >
+                <a
+                  class="absolute inset-0 flex items-center justify-center bg-card text-card-foreground hover:bg-card/80 transition-colors duration-200"
+                  href="https://x.com/mealbud.ai"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    data-testid="play-icon"
+                  />
+                </a>
+                <img
+                  alt="Mealbud AI's video"
+                  class="object-cover w-full h-full"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  src="/images/placeholder.svg"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                />
+              </li>
+              <li
+                class="bg-card p-4 rounded-lg shadow-sm border"
+              >
+                <div
+                  class="grid grid-cols-[2.5rem_1fr] gap-2"
+                >
+                  <span
+                    class="relative flex shrink-0 overflow-hidden rounded-full size-10"
+                    data-slot="avatar"
+                  >
+                    <span
+                      class="bg-muted flex size-full items-center justify-center rounded-full"
+                      data-slot="avatar-fallback"
+                    >
+                      N
+                    </span>
+                  </span>
+                  <div
+                    class="text-xs"
+                  >
+                    <p
+                      class="flex items-center gap-1 text-base"
+                    >
+                      Nassim
+                    </p>
+                    <p>
+                      <span
+                        class="text-muted-foreground"
+                      >
+                        @nassimlabs
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-base text-card-foreground mt-2"
+                >
+                  Mealbud's weekly nutrition breakdown is clean, simple, and actually useful. I can see where I'm slacking (fiber, always fiber 🙄) and where I'm doing better than I thought.
+                </p>
+                <time
+                  class="text-xs text-muted-foreground mt-2"
+                >
+                  March 18, 2025 at 12:27 PM
+                </time>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </div>
 `;
